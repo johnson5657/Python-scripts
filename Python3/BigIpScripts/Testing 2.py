@@ -14,7 +14,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 # User credentials
-f5_username = 'ye.shemesh'
+f5_username = 'ye.esh'
 f5_password = 'your_password'
 f5_emailaddr = 'ye.shemesh@f5.com'
 
