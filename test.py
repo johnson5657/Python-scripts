@@ -6,7 +6,7 @@
 def main():
     """Check if there's enough free mem"""
     print("everything is ok")
-    """change on the remote repo 2"""
+    """change on the remote"""
 
 
 main()
