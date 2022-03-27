@@ -8,6 +8,13 @@ def main():
     print("everything is ok")
     """change on the remote"""
 
+def testfunc():
+    a=1
+    b=2
+
+def diskfull():
+    return "this disk is full"
 
 main()
+
 
