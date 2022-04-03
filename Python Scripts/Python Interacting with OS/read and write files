@@ -1,0 +1,45 @@
+# read file
+
+file = open("2222.txt")
+
+# read line in a txt file
+print(file.readline()) #each time we call the  readline the function increase the line counter by one
+
+print(file.read()) # read the entire file remember that if you execture the read after you alrady rad some lines then the function will continue to read from where you left off
+
+file.close() # close the file after finish to reading it as when you open a file to read the FS will lock the file for other programs
+
+
+#the with block allow us to open a file and when the code is done the with block will automaticlly close it
+with open("2222.txt")  as file:
+    print(file.readline())
+
+
+#iterate through a txt file
+
+with open("2222.txt") as file:
+    for line in file:
+        print(line.upper().strip())
+
+#the function readlines() will read the file onctent and put it into a list .
+
+file = open("2222.txt")
+listlines =  file.readlines()
+file.close()
+
+for i in listlines:
+    print (i.strip())
+
+
+#####################################################################################################################
+#WRITING TO A FILE
+####################################################################################################################
+
+#by default the open funtion uses the 'r' read only when accessing a file
+#we can use several modes to access a file
+# w = write = this will overwrite the exsiting content of a file
+# r = read
+# a = append contect to the end of the file
+
+with open("2222.txt","w") as file: # if we open a file to write and the files doesn't exsit Python will create a new file
+    file.write("THIS IS NEW LINE TO WRITE TO A FILE")

@@ -1,0 +1,56 @@
+"""
+
+
+
+import os
+import sys
+
+log = open(sys.argv[1],"r")
+a=log.read().splitlines()
+
+for line in a: #read the file line by line
+
+    try:
+        index = line.index(">: ") # get the index for the first occurence of string
+        print(line[index+3:]) # print the rest of the line from the index+3 to the end
+    except ValueError: # we put the try and expcept inside the loop for the ValueError exception in case the index string is not found.
+        print(" ")
+"""
+
+
+#def Tuplely(a):
+ #   return a,1+a,2+a
+#Tuplely(4)
+#(4, 5, 6)
+#a = Tuplely(4)
+#a[0]
+#4
+#a[0] = 3
+#Traceback (most recent call last):
+#  File "<input>", line 1, in <module>
+#TypeError: 'tuple' object does not support item assignment
+
+
+
+def skip_elements(elements):
+	# code goes here
+	res=[]
+	for i,name in enumerate(elements): # THE enumerate function also increment i as it advanced through the list elements
+	    if i%2==0:res.append(name)
+	return res
+
+print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
+
+
+
+def mails(ppl):
+    res = []
+    for mail,name in ppl:
+        res.append("{}<{}>".format(name, mail))
+    return res
+
+print (mails([("sdfds@fdsfsd","Ass"),("fdsfdsfds@fff5.com","dfdsfdsfds")]))# List of Tuples
+
+
+x = [ i for i in range(0,50,2)]
+print(x)
